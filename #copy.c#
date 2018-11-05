@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+#define OUT 0
+#define IN 1
+#define MAXLEN 10
+
+int main(){
+
+  int arr_char[MAXLEN + 1];
+  int c, nc, tracker;
+  int j, i, k;
+
+  for (i = 0; i < MAXLEN; ++i) /*array indexed 0 to 9 */
+    arr_char[i] = 0;
+  
+  tracker = IN;
+  while ((c = getchar()) != EOF){
+    ++nc;
+    
+    if (nc == MAXLEN)
+      nc = 0;
+
+    if (c == '\n' || c == ' ' || c == '\t'){
+      --nc;
+      tracker = OUT;
+    }
+    if (tracker == OUT){
+      ++arr_char[nc];
+      nc = 0;
+      tracker = IN;
+    }
+    
+  }
+
+  printf("array values are: ");
+  for (j = 0; j < MAXLEN; ++j){
+    printf(" %d ", j);
+    for (k = 0; k < arr_char[j]; ++k){
+      putchar('*');
+     }
+    printf("\n");
+
+  }
+}

@@ -1,0 +1,65 @@
+#include <stdio.h>
+
+#define ASCII 93
+
+int main()
+{
+  /* A program to print the frequencies of each char 
+   in its input*/
+
+  int c, k, z, i, y, m, g;
+  int nc;
+  int curr_freq, max_freq;
+  long ascii_char[ASCII];
+
+  for (i = 0; i < ASCII; ++i)
+    {
+      ascii_char[i] = 0;
+    }
+
+  while ((c = getchar()) != EOF)
+    {
+      ++nc;
+      ++ascii_char[c];
+    }
+  
+  max_freq = ascii_char[0];
+  for (y = 0; y < ASCII; ++y)
+    {
+      /* ascii_char[i] = (ascii_char[i] / nc) * 100; */
+  
+      curr_freq = ascii_char[y];
+
+      if (curr_freq > max_freq)
+  	max_freq = curr_freq;
+    }
+
+  for (m = max_freq; m > 0; --m)
+    {
+      printf("%3d|", m);
+      for (k = 0; k < ASCII; ++k);
+      {
+      	if (ascii_char[k] >= m)
+      	  {
+      	    printf("*");
+      	  }
+      	else
+      	  printf(" ");
+	
+	printf("\n");
+      }	    
+     }
+  /*  */
+  for (g = 33; g < ASCII + 33; ++g)
+   {
+     printf("%c", g);
+   }
+  
+  printf("\n");
+  for (int z = 0; z < ASCII; ++z)
+   {
+     printf("%ld", ascii_char[z]);
+   }
+  printf("\n");
+
+}

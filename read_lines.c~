@@ -1,0 +1,27 @@
+#include <stdio.h>
+#define MAXLEN 1000
+
+int getline(char line[], int len);
+void copy(char to[], char from[]);
+
+int main()
+{
+  
+}
+
+
+int getline(char line[], int len)
+{
+
+  int c, i;
+
+  while ((c = getchar()) != EOF))
+  {
+    line[i] = c;
+
+    if (c == '\n')
+    ++i;
+    
+  }
+
+}

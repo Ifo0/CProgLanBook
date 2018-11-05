@@ -1,0 +1,18 @@
+
+
+
+
+
+int main()
+
+  blank = 0;
+  length = 0; 
+  while ((c = getchar()) != EOF){
+    if (c == '/t')
+      continue;
+    if (c == ' ')
+  
+    }
+    else if (blank == 1)
+      if c != ' '
+      

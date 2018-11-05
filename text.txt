@@ -1,0 +1,6 @@
+This is a text
+It has one newline
+  And one tab
+  Another tab
+  And many spaces
+eof

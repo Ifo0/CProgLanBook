@@ -1,0 +1,16 @@
+
+f#include <stdio.h>
+
+/* A fahrenheit to celsius table written with
+a for loop in reverse order
+*/
+
+int main()
+{
+  int fahr;
+
+  for (fahr = 300; fahr >= 0; fahr = fahr - 20) {
+    printf("%5d  %5.1f\n", fahr, ((5.0/9.0) * (fahr - 32.0)));
+  }
+
+}

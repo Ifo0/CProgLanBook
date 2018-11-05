@@ -1,0 +1,49 @@
+#include <stdio.h>
+#define MAXINPUT 50
+
+int reverse(char rev[], char orig[], int length);
+int read_string(char string[]);
+
+int main()
+{
+  int len;
+  char string[MAXINPUT];
+  char rev[MAXINPUT];
+  
+  while ((len = read_string(string)) > 0)
+    reverse(rev, string, len);
+
+  return 0;
+}
+
+
+
+int read_string(char string[]);
+{
+  int c, i;
+
+  i = 0;
+  while ((c = getchar()) != EOF && i != '\n'){
+    string[i] = c;
+    ++i;
+  }
+  ++i;
+  string[i] = '\0';
+  return i;
+}
+
+
+int reverse(char rev[], char orig[], int length);
+{
+  int i, j;
+  
+  for (j = length, i = 0; j > 0; j--){
+    rev[i] = orig[j];
+    ++i;
+  }
+  ++i;
+  rev[i] = '\0';
+
+  return 0; 
+
+}
